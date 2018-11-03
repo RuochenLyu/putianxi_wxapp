@@ -1,10 +1,7 @@
-import QQMapWX from '../../lib/qqmap-wx-jssdk.min.js'
-
 Page({
   data: {
     hospital: {},
     hospitals: getApp().globalData.hospitals,
-    map: {},
     markers: []
   },
 
@@ -28,24 +25,14 @@ Page({
   },
 
   _renderMap() {
-    let map = new QQMapWX({
-      key: 'LRBBZ-NEVWI-KUMGP-57UTW-YHKKZ-RIBSO'
-    })
-
-    map.geocoder({
-      address: `${this.data.hospital.province} ${this.data.hospital.city} ${this.data.hospital.district} ${this.data.hospital.name}`,
-      success: (res) => {
-        this.setData({
-          map: res.result,
-          markers: [{
-            iconPath: '/images/marker.png',
-            width: 30,
-            height: 30,
-            longitude: res.result.location.lng,
-            latitude: res.result.location.lat
-          }]
-        })
-      }
+    this.setData({
+      markers: [{
+        iconPath: '/images/marker.png',
+        width: 30,
+        height: 30,
+        longitude: this.data.hospital.lng,
+        latitude: this.data.hospital.lat
+      }]
     })
   },
 

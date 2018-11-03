@@ -10,8 +10,8 @@
   <view class="hospital-info">{{hospital.address}}</view>
 </view>
 
-<map wx:if="{{map.location}}" class="hospital-map"
+<map wx:if="{{hospital.lng}}" class="hospital-map"
   subkey="LRBBZ-NEVWI-KUMGP-57UTW-YHKKZ-RIBSO"
-  longitude="{{map.location.lng}}" latitude="{{map.location.lat}}" markers="{{markers}}"></map>
+  longitude="{{hospital.lng}}" latitude="{{hospital.lat}}" markers="{{markers}}"></map>
 
 <share-button />
