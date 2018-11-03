@@ -1,0 +1,6 @@
+<button wx:if="{{showShareButton}}" class="share-button" open-type="share" hover-class="active">
+  <text class="icon-share"></text>
+  <text>分享给更多人</text>
+</button>
+
+<navigator wx:else url="{{url}}" class="share-button" open-type="redirect" hover-class="active">搜索更多医院</navigator>

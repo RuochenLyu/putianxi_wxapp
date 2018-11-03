@@ -1,0 +1,17 @@
+<view class="main">
+  <view class="hospital-warning">这是一家莆田系医院，请远离！</view>
+
+  <view class="hospital-name">{{hospital.name}}</view>
+  <view class="hospital-info">
+    <text>{{hospital.city}} </text>
+    <text wx:if="{{hospital.city != hospital.province}}">{{hospital.province}} </text>
+    <text>{{hospital.district}}</text>
+  </view>
+  <view class="hospital-info">{{hospital.address}}</view>
+</view>
+
+<map wx:if="{{map.location}}" class="hospital-map"
+  subkey="LRBBZ-NEVWI-KUMGP-57UTW-YHKKZ-RIBSO"
+  longitude="{{map.location.lng}}" latitude="{{map.location.lat}}" markers="{{markers}}"></map>
+
+<share-button />

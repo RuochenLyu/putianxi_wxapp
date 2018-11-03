@@ -1,0 +1,31 @@
+.share-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100rpx auto 0;
+  width: 350rpx;
+  height: 88rpx;
+  font-size: 36rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #E25D56;
+  border-radius: 10rpx;
+}
+
+.share-button::after{
+  border: none;
+}
+
+.share-button.active {
+  opacity: 0.8;
+}
+
+.share-button .icon-share {
+  margin-right: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><g id="icomoon-ignore"></g><path fill="#fff" d="M347.2 625.6c62.4-97.6 144-160 305.6-160v112l206.4-177.6-206.4-179.2v107.2c-235.2 0-305.6 200-305.6 297.6z"></path><path fill="#fff" d="M780.8 571.2v184c0 4.418-3.582 8-8 8v0h-560c-4.418 0-8-3.582-8-8v0-416c0-4.418 3.582-8 8-8v0h201.6l80-80h-281.6c-48.601 0-88 39.399-88 88v0 416c0 48.601 39.399 88 88 88v0h560c48.601 0 88-39.399 88-88v0-264z"></path></svg>');
+  background-repeat: no-repeat;
+  background-size: 60rpx;
+}

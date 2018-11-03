@@ -1,0 +1,14 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/hospitals/index",
+    "pages/hospitals/show"
+  ],
+  "window": {
+    "backgroundColor": "#F2F2F3",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "莆田系凉了吗",
+    "navigationBarTextStyle": "black"
+  }
+}
