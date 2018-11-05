@@ -1,9 +1,9 @@
-import hospitals from 'hospitals';
+import hospitals from 'hospitals'
 
 App({
   onLaunch: function() {
     this.globalData = {
-      hospitals: hospitals
+      hospitals
     }
   }
 })

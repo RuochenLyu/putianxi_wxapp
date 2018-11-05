@@ -27,11 +27,24 @@ Page({
   _renderMap() {
     this.setData({
       markers: [{
+        id: this.data.hospital._id,
         iconPath: '/images/marker.png',
         width: 30,
         height: 30,
         longitude: this.data.hospital.lng,
-        latitude: this.data.hospital.lat
+        latitude: this.data.hospital.lat,
+        anchor: {
+          x: .5,
+          y: .5
+        },
+        callout: {
+          content: `${this.data.hospital.name}\n${this.data.hospital.address}`,
+          padding: 8,
+          color: '#ffffff',
+          borderRadius: 4,
+          bgColor: '#E25D56',
+          borderColor: '#E25D56'
+        }
       }]
     })
   },

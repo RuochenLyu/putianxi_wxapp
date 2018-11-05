@@ -1,0 +1,6 @@
+<map class="map" id="map"
+  subkey="LRBBZ-NEVWI-KUMGP-57UTW-YHKKZ-RIBSO"
+  markers="{{markers}}"
+  scale="12"
+  show-location="true"
+  bindcallouttap="tapCallout" />

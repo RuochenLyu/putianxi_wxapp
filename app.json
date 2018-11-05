@@ -2,6 +2,7 @@
   "cloud": true,
   "pages": [
     "pages/hospitals/index",
+    "pages/maps/index",
     "pages/hospitals/show"
   ],
   "window": {
@@ -10,5 +11,20 @@
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "莆田系凉了吗",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "list": [{
+      "pagePath": "pages/hospitals/index",
+      "text": "搜索",
+      "iconPath" : "/images/search.png",
+      "selectedIconPath": "/images/search_selected.png"
+    }, {
+      "pagePath": "pages/maps/index",
+      "text": "地图",
+      "iconPath" : "/images/map.png",
+      "selectedIconPath": "/images/map_selected.png"
+    }]
   }
 }
