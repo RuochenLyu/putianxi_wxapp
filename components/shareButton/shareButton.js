@@ -1,11 +1,4 @@
 Component({
-  properties: {
-    url: {
-      type: String,
-      value: '/pages/hospitals/index',
-    }
-  },
-
   data: {
     showShareButton: true
   },

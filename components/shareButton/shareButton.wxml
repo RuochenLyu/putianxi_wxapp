@@ -3,4 +3,4 @@
   <text>分享给更多人</text>
 </button>
 
-<navigator wx:else url="{{url}}" class="share-button" open-type="redirect" hover-class="active">搜索更多医院</navigator>
+<navigator wx:else url="/pages/hospitals/index" class="share-button" open-type="switchTab" hover-class="active">搜索更多医院</navigator>
