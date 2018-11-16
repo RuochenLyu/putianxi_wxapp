@@ -18717,4 +18717,24 @@ export default [{
   },
   "latitude": 22.581384,
   "longitude": 113.863872
+},
+{
+  "id": 937,
+  "iconPath": "/images/marker.png",
+  "width": 30,
+  "height": 30,
+  "anchor": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "callout": {
+    "content": "厦门大学附属厦门眼科中心医院\n思明区厦禾路336号",
+    "padding": 8,
+    "color": "#ffffff",
+    "borderRadius": 4,
+    "bgColor": "#E25D56",
+    "borderColor": "#E25D56"
+  },
+  "latitude": 24.459943,
+  "longitude": 118.08086
 }]

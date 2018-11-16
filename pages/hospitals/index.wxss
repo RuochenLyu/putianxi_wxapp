@@ -102,6 +102,8 @@ page {
 }
 
 .results-init-icon {
+  position: relative;
+  left: 10rpx;
   margin: 0 auto 50rpx;
   width: 160rpx;
   height: 160rpx;
