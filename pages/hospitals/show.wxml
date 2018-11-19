@@ -1,5 +1,5 @@
 <view class="main">
-  <view class="hospital-warning">这是一家莆田系医院，请远离！</view>
+  <view class="hospital-warning">疑似莆田系医院，建议远离。</view>
 
   <view class="hospital-name">{{hospital.name}}</view>
   <view class="hospital-info">

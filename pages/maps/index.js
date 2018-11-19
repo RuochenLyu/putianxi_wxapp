@@ -23,7 +23,7 @@ Page({
 
   onShareAppMessage() {
     return {
-      title: '莆田系医院地图'
+      title: '推荐使用「莆田系凉了吗」查询莆田系医院。'
     }
   }
 })

@@ -1,0 +1,49 @@
+page {
+  padding: 50rpx 50rpx 0;
+  box-sizing: border-box;
+}
+
+.article-title {
+  margin-bottom: 30rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.article-desc {
+  font-size: 24rpx;
+  color: #777;
+}
+
+.article-content view {
+  margin: 50rpx 0;
+  line-height: 1.8;
+  color: #333;
+}
+
+.article-image {
+  width: 100%;
+}
+
+view.image-desc {
+  margin-top: 0;
+  font-size: 24rpx;
+  color: #777;
+}
+
+.subtitle {
+  font-weight: bold;
+}
+
+.statement {
+  margin: 50rpx 0;
+  padding: 50rpx 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+.statment-content {
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #777;
+}

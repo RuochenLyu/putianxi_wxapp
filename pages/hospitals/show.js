@@ -11,7 +11,7 @@ Page({
     })
     this._renderMap()
     this.onShareAppMessage = () => ({
-      title: this.data.hospital.name
+      title: `「${this.data.hospital.name}」疑似莆田系医院，建议远离。`
     })
   },
 
