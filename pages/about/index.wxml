@@ -1,5 +1,8 @@
 <view class="article">
-  <view class="article-title">笼罩在丑闻中的医疗帝国：莆田系医院发迹史</view>
+  <view class="article-title" bindtap="copyUrl">
+    <text>笼罩在丑闻中的医疗帝国：莆田系医院发迹史</text>
+    <text class="article-title-icon"></text>
+  </view>
   <view class="article-desc">黄瑞黎 @ 纽约时报中文网</view>
 
   <view class="article-content">
