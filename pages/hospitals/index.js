@@ -57,6 +57,10 @@ Page({
     this.search(keyword)
   },
 
+  onTabItemTap() {
+    wx.vibrateShort()
+  },
+
   onShareAppMessage() {
     return {
       title: '推荐使用「莆田系凉了吗」查询莆田系医院。'
