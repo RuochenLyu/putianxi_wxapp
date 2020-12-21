@@ -1,4 +1,5 @@
 page {
+  padding-bottom: 200rpx;
   background: #F2F2F3;
 }
 
@@ -134,4 +135,72 @@ page {
   width: 160rpx;
   height: 160rpx;
   background: center / 160rpx no-repeat url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path style="fill:#ED5151;" d="M255.75,10c132.55,0,246,113.45,246,246s-113.45,246-246,246s-246-113.45-246-246S123.2,10,255.75,10 z"/><polygon style="fill:#E3F2FF;" points="375.75,216 375.75,296 295.75,296 295.75,376 215.75,376 215.75,296 135.75,296 135.75,216 215.75,216 215.75,136 295.75,136 295.75,216 "/><path d="M133,103c5.52,0,10-4.48,10-10s-4.48-10-10-10s-10,4.48-10,10S127.48,103,133,103z"/><path d="M256,0C118.02,0,0,117.801,0,256c0,138.011,117.815,256,256,256c137.98,0,256-117.801,256-256C512,117.989,394.185,0,256,0z M256,492C128.075,492,20,383.925,20,256S128.075,20,256,20s236,108.075,236,236S383.925,492,256,492z"/><path d="M256,43c-32.065,0-65.985,7.4-93.062,20.303c-4.985,2.376-7.102,8.344-4.726,13.329c2.375,4.985,8.341,7.104,13.329,4.726 C196.024,69.691,226.809,63,256,63c104.617,0,193,88.383,193,193s-88.383,193-193,193S63,360.617,63,256 c0-47.786,17.531-94.885,48.099-129.221c3.673-4.125,3.306-10.446-0.819-14.118c-4.126-3.674-10.445-3.303-14.118,0.819 C62.376,151.43,43,203.376,43,256c0,115.728,97.103,213,213,213c115.728,0,213-97.103,213-213C469,140.272,371.897,43,256,43z"/><path d="M296,126h-80c-5.522,0-10,4.478-10,10v70h-70c-5.522,0-10,4.478-10,10v80c0,5.522,4.478,10,10,10h70v70 c0,5.522,4.478,10,10,10h80c5.522,0,10-4.478,10-10v-70h70c5.522,0,10-4.478,10-10v-80c0-5.522-4.478-10-10-10h-70v-70 C306,130.478,301.522,126,296,126z M366,226v60h-70c-5.522,0-10,4.478-10,10v70h-60v-70c0-5.522-4.478-10-10-10h-70v-60h70 c5.522,0,10-4.478,10-10v-70h60v70c0,5.522,4.478,10,10,10H366z"/></svg>');
+}
+
+
+/* share button */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.share-button {
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  left: 20rpx;
+  width: auto !important;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  font-weight: normal;
+  text-align: left;
+  line-height: 1.5;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20rpx;
+  animation-duration: 0.75s;
+  animation-name: fadeInUp;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.share-button-logo {
+  margin-right: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
+}
+
+.share-button-main {
+  flex: 1;
+}
+
+.share-button-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #222;
+}
+
+.share-button-desc {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.share-button-label {
+  padding: 0 30rpx;
+  line-height: 50rpx;
+  font-weight: 500;
+  font-size: 28rpx;
+  color: #c20519;
+  background-color: #eee;
+  border-radius: 25rpx;
 }

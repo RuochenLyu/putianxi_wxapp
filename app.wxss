@@ -3,3 +3,13 @@ page {
   color: #000;
   font-size: 32rpx;
 }
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+button::after {
+  border: none;
+}

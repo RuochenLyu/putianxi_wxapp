@@ -1,45 +1,54 @@
 <view class="header">
-  <view class="searchbar">
-    <text class="searchbar-icon"></text>
-    <input class="searchbar-input" value="{{keyword}}" placeholder="输入医院名称或地址搜索" confirm-type="search" adjust-position="false" bindconfirm="inputSearch" />
-    <text class="searchbar-cancel" bindtap="cancelSearch" hidden="{{!keyword}}"></text>
-  </view>
+	<view class="searchbar">
+		<text class="searchbar-icon"></text>
+		<input class="searchbar-input" value="{{keyword}}" placeholder="输入医院名称或地址搜索" confirm-type="search" adjust-position="false" bindconfirm="inputSearch" />
+		<text class="searchbar-cancel" bindtap="cancelSearch" hidden="{{!keyword}}"></text>
+	</view>
 </view>
 
 <view class="main">
-  <view class="results-init" wx:if="{{hits == -1}}">
-    <view class="results-init-icon"></view>
-    <view>小程序为了方便大家识别并远离莆田系医院</view>
-    <view>数据来源于网络，如果错误请反馈</view>
+	<view class="results-init" wx:if="{{hits == -1}}">
+		<view class="results-init-icon"></view>
+		<view>小程序为了方便大家识别并远离莆田系医院</view>
+		<view>数据来源于网络，如果错误请反馈</view>
 
-    <view class="results-init-links">
-      <text>你可以搜索：</text>
-      <block wx:for="{{hotKeywords}}" wx:key="*this">
-        <text class="results-init-link" hover-class="active" bindtap="linkSearch" data-keyword="{{item}}">{{item}} </text>
-      </block>
-      <text>等信息</text>
-    </view>
-  </view>
+		<view class="results-init-links">
+			<text>你可以搜索：</text>
+			<block wx:for="{{hotKeywords}}" wx:key="*this">
+				<text class="results-init-link" hover-class="active" bindtap="linkSearch" data-keyword="{{item}}">{{item}} </text>
+			</block>
+			<text>等信息</text>
+		</view>
+	</view>
 
-  <view class="results-empty" wx:elif="{{hits == 0}}">
-    <view class="results-empty-icon"></view>
-    <view>真棒！你搜索的不是莆田系医院。</view>
-  </view>
+	<view class="results-empty" wx:elif="{{hits == 0}}">
+		<view class="results-empty-icon"></view>
+		<view>真棒！你搜索的不是莆田系医院。</view>
+	</view>
 
-  <view class="main-desc" wx:if="{{results.length > 0}}">
-    <text class="main-desc-icon"></text>
-    <text class="main-desc-text">以下均为莆田系医院</text>
-    <text class="main-desc-icon"></text>
-  </view>
+	<view class="main-desc" wx:if="{{results.length > 0}}">
+		<text class="main-desc-icon"></text>
+		<text class="main-desc-text">以下均为莆田系医院</text>
+		<text class="main-desc-icon"></text>
+	</view>
 
-  <block wx:for="{{results}}" wx:key="item._id">
-    <navigator class="hospital" url="/pages/hospitals/show?id={{item._id}}" hover-class="active">
-      <view class="hospital-name">{{item.name}}</view>
-      <view class="hospital-info">
-        <text>{{item.city}} </text>
-        <text wx:if="{{item.city != item.province}}">{{item.province}} </text>
-        <text>{{item.district}}</text>
-      </view>
-    </navigator>
-  </block>
+	<block wx:for="{{results}}" wx:key="item._id">
+		<navigator class="hospital" url="/pages/hospitals/show?id={{item._id}}" hover-class="active">
+			<view class="hospital-name">{{item.name}}</view>
+			<view class="hospital-info">
+				<text>{{item.city}} </text>
+				<text wx:if="{{item.city != item.province}}">{{item.province}} </text>
+				<text>{{item.district}}</text>
+			</view>
+		</navigator>
+	</block>
 </view>
+
+<navigator class="button share-button" hover-class="active" target="miniProgram" app-id="wx92f5dbab5c9523c9" path="pages/index/index?channel=default&source=莆田">
+	<image class="share-button-logo" src="/images/logo.png" />
+	<view class="share-button-main">
+		<view class="share-button-title">红小包丨天天外卖礼</view>
+		<view class="share-button-desc">无需拼手气，这样点外卖更便宜！</view>
+	</view>
+	<view class="share-button-label">领红包</view>
+</navigator>
