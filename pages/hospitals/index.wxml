@@ -19,6 +19,8 @@
 			</block>
 			<text>等信息</text>
 		</view>
+
+		<ad class="ad-video" unit-id="adunit-53f3eba08a77a773" ad-type="video" ad-theme="white"></ad>
 	</view>
 
 	<view class="results-empty" wx:elif="{{hits == 0}}">
@@ -32,7 +34,7 @@
 		<text class="main-desc-icon"></text>
 	</view>
 
-	<block wx:for="{{results}}" wx:key="item._id">
+	<block wx:for="{{results}}" wx:key="_id">
 		<navigator class="hospital" url="/pages/hospitals/show?id={{item._id}}" hover-class="active">
 			<view class="hospital-name">{{item.name}}</view>
 			<view class="hospital-info">
@@ -43,12 +45,3 @@
 		</navigator>
 	</block>
 </view>
-
-<navigator class="button share-button" hover-class="active" target="miniProgram" app-id="wx92f5dbab5c9523c9" path="pages/index/index?channel=default&source=莆田">
-	<image class="share-button-logo" src="/images/logo.png" />
-	<view class="share-button-main">
-		<view class="share-button-title">红小包丨天天外卖礼</view>
-		<view class="share-button-desc">无需拼手气，这样点外卖更便宜！</view>
-	</view>
-	<view class="share-button-label">领红包</view>
-</navigator>

@@ -8,8 +8,10 @@ Page({
     hospitals: getApp().globalData.hospitals,
     results: []
   },
+  
+  onLoad({ showAd }) {
+    if (showAd) this.renderAd();
 
-  onLoad() {
     let options = {
       shouldSort: true,
       threshold: 0.4,
@@ -25,6 +27,23 @@ Page({
     }
 
     this._fuse = new Fuse(this.data.hospitals, options)
+  },
+
+  renderAd() {
+    let interstitialAd = null
+
+    if (wx.createInterstitialAd) {
+      interstitialAd = wx.createInterstitialAd({
+        adUnitId: 'adunit-6503592b42479b46'
+      })
+    }
+    console.log(wx.createInterstitialAd)
+
+    if (interstitialAd) {
+      interstitialAd.show().catch((err) => {
+        console.error(err)
+      })
+    }
   },
 
   search(keyword) {

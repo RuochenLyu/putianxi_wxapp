@@ -97,7 +97,7 @@ page {
 }
 
 .results-init {
-  padding-top: 100rpx;
+  margin: -100px -50rpx;
   color: #777;
   text-align: center;
 }
@@ -203,4 +203,8 @@ page {
   color: #c20519;
   background-color: #eee;
   border-radius: 25rpx;
+}
+
+.ad-video {
+  margin-top: 40px;
 }
